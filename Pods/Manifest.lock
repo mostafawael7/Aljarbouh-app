@@ -1,0 +1,54 @@
+PODS:
+  - Alamofire (5.8.1)
+  - CocoaLumberjack (3.8.4):
+    - CocoaLumberjack/Core (= 3.8.4)
+  - CocoaLumberjack/Core (3.8.4)
+  - DropDown (2.3.13)
+  - FluidTabBarController (0.5.3)
+  - HidingNavigationBar (1.0.0)
+  - HorizontalCalendar (0.0.1)
+  - IQKeyboardManagerSwift (7.0.2)
+  - Kingfisher (7.11.0)
+  - SVGKit (3.0.0):
+    - CocoaLumberjack (~> 3.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - DropDown
+  - FluidTabBarController
+  - HidingNavigationBar (~> 1.0)
+  - HorizontalCalendar
+  - IQKeyboardManagerSwift
+  - Kingfisher (~> 7.0)
+  - SVGKit
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - CocoaLumberjack
+    - DropDown
+    - FluidTabBarController
+    - HidingNavigationBar
+    - HorizontalCalendar
+    - IQKeyboardManagerSwift
+    - Kingfisher
+    - SVGKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  CocoaLumberjack: df59726690390bb8aaaa585938564ba1c8dbbb44
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FluidTabBarController: 14b2e61bcf03bc362ec2f4cba0dc804ee0a9c268
+  HidingNavigationBar: 170dd21df8e89c465c01f047d4306778d1ce304c
+  HorizontalCalendar: 264ae0d6b162890d637db90db3a618fc14587a69
+  IQKeyboardManagerSwift: d338c11a896e9f29603443700c4567e32f830c22
+  Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
+  SVGKit: 1ad7513f8c74d9652f94ed64ddecda1a23864dea
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 205d0f274d1ea9c338068559fa10210dfec69c11
+
+COCOAPODS: 1.14.3

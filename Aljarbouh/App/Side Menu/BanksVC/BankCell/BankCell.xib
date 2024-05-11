@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankCell" rowHeight="260" id="KGk-i7-Jjw" userLabel="BankCell" customClass="BankCell" customModule="Aljarbouh" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="503" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="503" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ba8-V6-3Rs">
+                        <rect key="frame" x="8" y="8" width="487" height="244"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bank" translatesAutoresizingMaskIntoConstraints="NO" id="7mC-08-SFa">
+                                <rect key="frame" x="303" y="4" width="180" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="FcR-cO-Ix2"/>
+                                    <constraint firstAttribute="width" constant="180" id="IUo-Is-YMP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqP-f6-UBY">
+                                <rect key="frame" x="8" y="92" width="475" height="21.666666666666671"/>
+                                <string key="text">حساب الاشتراكات والتبرعات والصدقات	</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" name="primary"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H38-SY-c6S">
+                                <rect key="frame" x="6" y="117.66666666666667" width="475" height="1"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="M1o-Mo-Jty"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="VmX-z3-iFr">
+                                <rect key="frame" x="354.33333333333331" y="134.66666666666666" width="128.66666666666669" height="45.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم الحساب" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WMJ-Zf-YpI">
+                                        <rect key="frame" x="60.000000000000007" y="0.0" width="68.666666666666686" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="primary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2470515249940" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uB3-PU-Lbr">
+                                        <rect key="frame" x="0.0" y="25" width="128.66666666666666" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddX-ae-aKD">
+                                <rect key="frame" x="16" y="142.33333333333334" width="30" height="30"/>
+                                <color key="backgroundColor" name="buttonBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="E01-Ih-Ozk"/>
+                                    <constraint firstAttribute="height" constant="30" id="ch5-ai-57E"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="copy">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="copyClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LRX-5Q-mYJ"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SYo-BR-OVi">
+                                <rect key="frame" x="240.66666666666663" y="196" width="242.33333333333337" height="45.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="رقم IBAN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVw-za-UxP">
+                                        <rect key="frame" x="186.00000000000003" y="0.0" width="56.333333333333343" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="primary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SA3620000002470515249940" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXM-Gc-EMZ">
+                                        <rect key="frame" x="0.0" y="25" width="242.33333333333334" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ij6-by-qtX">
+                                <rect key="frame" x="16" y="203.66666666666666" width="30" height="30"/>
+                                <color key="backgroundColor" name="buttonBackground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0pm-rn-Fn8"/>
+                                    <constraint firstAttribute="width" constant="30" id="bJm-vL-VNN"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="copy">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="copyClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yaS-yW-b4v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="7mC-08-SFa" secondAttribute="trailing" constant="4" id="Axc-9C-VNe"/>
+                            <constraint firstItem="ddX-ae-aKD" firstAttribute="centerY" secondItem="VmX-z3-iFr" secondAttribute="centerY" id="Bos-uT-xhh"/>
+                            <constraint firstAttribute="trailing" secondItem="VmX-z3-iFr" secondAttribute="trailing" constant="4" id="HNC-oQ-MdY"/>
+                            <constraint firstItem="Ij6-by-qtX" firstAttribute="leading" secondItem="ba8-V6-3Rs" secondAttribute="leading" constant="16" id="MW8-xb-50J"/>
+                            <constraint firstItem="ddX-ae-aKD" firstAttribute="leading" secondItem="ba8-V6-3Rs" secondAttribute="leading" constant="16" id="NGI-rN-2nI"/>
+                            <constraint firstItem="dqP-f6-UBY" firstAttribute="leading" secondItem="ba8-V6-3Rs" secondAttribute="leading" constant="8" id="OL5-57-kH9"/>
+                            <constraint firstAttribute="trailing" secondItem="H38-SY-c6S" secondAttribute="trailing" constant="6" id="Yvf-5I-gqh"/>
+                            <constraint firstItem="dqP-f6-UBY" firstAttribute="top" secondItem="7mC-08-SFa" secondAttribute="bottom" constant="8" id="fIW-X5-JfR"/>
+                            <constraint firstItem="VmX-z3-iFr" firstAttribute="top" secondItem="H38-SY-c6S" secondAttribute="bottom" constant="16" id="g4g-yD-jpy"/>
+                            <constraint firstItem="SYo-BR-OVi" firstAttribute="top" secondItem="VmX-z3-iFr" secondAttribute="bottom" constant="16" id="got-hY-O4D"/>
+                            <constraint firstItem="H38-SY-c6S" firstAttribute="top" secondItem="dqP-f6-UBY" secondAttribute="bottom" constant="4" id="jFu-pd-f68"/>
+                            <constraint firstItem="H38-SY-c6S" firstAttribute="leading" secondItem="ba8-V6-3Rs" secondAttribute="leading" constant="6" id="kb7-ag-gYa"/>
+                            <constraint firstItem="Ij6-by-qtX" firstAttribute="centerY" secondItem="SYo-BR-OVi" secondAttribute="centerY" id="lyw-Mm-Dqb"/>
+                            <constraint firstAttribute="trailing" secondItem="SYo-BR-OVi" secondAttribute="trailing" constant="4" id="p9k-7n-vbJ"/>
+                            <constraint firstAttribute="trailing" secondItem="dqP-f6-UBY" secondAttribute="trailing" constant="4" id="qmf-OL-7Lg"/>
+                            <constraint firstItem="7mC-08-SFa" firstAttribute="top" secondItem="ba8-V6-3Rs" secondAttribute="top" constant="4" id="tAI-1n-W8C"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ba8-V6-3Rs" secondAttribute="bottom" constant="8" id="8z6-lU-4pS"/>
+                    <constraint firstItem="ba8-V6-3Rs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="H5V-FU-LIL"/>
+                    <constraint firstItem="ba8-V6-3Rs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="gIE-1D-8oI"/>
+                    <constraint firstAttribute="trailing" secondItem="ba8-V6-3Rs" secondAttribute="trailing" constant="8" id="sFY-lR-yq7"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="accNumLbl" destination="uB3-PU-Lbr" id="Nzy-9S-Oxr"/>
+                <outlet property="accountTypeLbl" destination="dqP-f6-UBY" id="SYA-qf-uQm"/>
+                <outlet property="bankLogo" destination="7mC-08-SFa" id="cH5-4h-pLq"/>
+                <outlet property="ibanNumLbl" destination="QXM-Gc-EMZ" id="WnR-q2-tgU"/>
+                <outlet property="parentView" destination="ba8-V6-3Rs" id="UUw-ks-3om"/>
+                <outletCollection property="copyBtns" destination="ddX-ae-aKD" collectionClass="NSMutableArray" id="UK1-pm-FyG"/>
+                <outletCollection property="copyBtns" destination="Ij6-by-qtX" collectionClass="NSMutableArray" id="df7-Yu-NCV"/>
+            </connections>
+            <point key="canvasLocation" x="107.63358778625954" y="67.957746478873247"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bank" width="127" height="38"/>
+        <image name="copy" width="15" height="15"/>
+        <namedColor name="buttonBackground">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="primary">
+            <color red="0.22352941176470589" green="0.23137254901960785" blue="0.49411764705882355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
