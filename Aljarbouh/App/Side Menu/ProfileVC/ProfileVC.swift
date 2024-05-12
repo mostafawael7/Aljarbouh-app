@@ -101,7 +101,7 @@ class ProfileVC: UIViewController {
         summaryLbl.text = profile.summary ?? "-"
         birthdateLbl.text = profile.dateOfBorn ?? "-"
         bornLocationLbl.text = profile.bornLocation ?? "-"
-        professionLbl.text = profile.profession ?? "-"
+        professionLbl.text = profile.profission ?? "-"
         hideAnimatedActivityIndicatorView()
     }
     

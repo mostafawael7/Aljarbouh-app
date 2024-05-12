@@ -15,6 +15,8 @@
 		1C14F3CC2B7E571C0095EB4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C14F3CB2B7E571C0095EB4D /* Assets.xcassets */; };
 		1C14F3CF2B7E571C0095EB4D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C14F3CD2B7E571C0095EB4D /* LaunchScreen.storyboard */; };
 		1C2658182B97CFC20021594F /* FamilyTreeFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2658172B97CFC20021594F /* FamilyTreeFilterVC.swift */; };
+		1C2DFD9A2BF15A8F005C10A0 /* MainMeetingsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DFD982BF15A8F005C10A0 /* MainMeetingsTableCell.swift */; };
+		1C2DFD9B2BF15A8F005C10A0 /* MainMeetingsTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DFD992BF15A8F005C10A0 /* MainMeetingsTableCell.xib */; };
 		1C38E5B12B85378E009614C0 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1C38E5B02B85378E009614C0 /* Home.storyboard */; };
 		1C38E5B32B8537C6009614C0 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5B22B8537C6009614C0 /* HomeVC.swift */; };
 		1C38E5B52B853FEB009614C0 /* HomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C38E5B42B853FEB009614C0 /* HomeTabBar.swift */; };
@@ -75,6 +77,8 @@
 		1C9B546E2B815DCF00FDF9CF /* OnboardingVC2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9B546D2B815DCF00FDF9CF /* OnboardingVC2.swift */; };
 		1C9B54702B815DD800FDF9CF /* OnboardingVC3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9B546F2B815DD800FDF9CF /* OnboardingVC3.swift */; };
 		1C9B54722B81612D00FDF9CF /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C9B54712B81612D00FDF9CF /* OnboardingVC.swift */; };
+		1CA84FF52BEFB4C50025DE0F /* FamilyMemberTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA84FF32BEFB4C50025DE0F /* FamilyMemberTableCell.swift */; };
+		1CA84FF62BEFB4C50025DE0F /* FamilyMemberTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CA84FF42BEFB4C50025DE0F /* FamilyMemberTableCell.xib */; };
 		1CB0488A2B9CB3DC00DAB3FA /* NotificationsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB048892B9CB3DC00DAB3FA /* NotificationsVC.swift */; };
 		1CB0488E2B9CB5B200DAB3FA /* NotificationsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB0488C2B9CB5B100DAB3FA /* NotificationsCell.swift */; };
 		1CB0488F2B9CB5B200DAB3FA /* NotificationsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CB0488D2B9CB5B100DAB3FA /* NotificationsCell.xib */; };
@@ -108,6 +112,8 @@
 		1C14F3CE2B7E571C0095EB4D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1C14F3D02B7E571C0095EB4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1C2658172B97CFC20021594F /* FamilyTreeFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyTreeFilterVC.swift; sourceTree = "<group>"; };
+		1C2DFD982BF15A8F005C10A0 /* MainMeetingsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMeetingsTableCell.swift; sourceTree = "<group>"; };
+		1C2DFD992BF15A8F005C10A0 /* MainMeetingsTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMeetingsTableCell.xib; sourceTree = "<group>"; };
 		1C38E5B02B85378E009614C0 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		1C38E5B22B8537C6009614C0 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		1C38E5B42B853FEB009614C0 /* HomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBar.swift; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 		1C9B546D2B815DCF00FDF9CF /* OnboardingVC2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC2.swift; sourceTree = "<group>"; };
 		1C9B546F2B815DD800FDF9CF /* OnboardingVC3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC3.swift; sourceTree = "<group>"; };
 		1C9B54712B81612D00FDF9CF /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
+		1CA84FF32BEFB4C50025DE0F /* FamilyMemberTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyMemberTableCell.swift; sourceTree = "<group>"; };
+		1CA84FF42BEFB4C50025DE0F /* FamilyMemberTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FamilyMemberTableCell.xib; sourceTree = "<group>"; };
 		1CB048892B9CB3DC00DAB3FA /* NotificationsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsVC.swift; sourceTree = "<group>"; };
 		1CB0488C2B9CB5B100DAB3FA /* NotificationsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCell.swift; sourceTree = "<group>"; };
 		1CB0488D2B9CB5B100DAB3FA /* NotificationsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationsCell.xib; sourceTree = "<group>"; };
@@ -296,6 +304,8 @@
 			children = (
 				1C55D24A2B98BAAB0027E0AA /* MeetingsTableCell.swift */,
 				1C55D24B2B98BAAB0027E0AA /* MeetingsTableCell.xib */,
+				1C2DFD982BF15A8F005C10A0 /* MainMeetingsTableCell.swift */,
+				1C2DFD992BF15A8F005C10A0 /* MainMeetingsTableCell.xib */,
 			);
 			path = MeetingsTableCell;
 			sourceTree = "<group>";
@@ -452,6 +462,15 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		1CA84FF22BEFB4A40025DE0F /* FamilyMemberTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CA84FF32BEFB4C50025DE0F /* FamilyMemberTableCell.swift */,
+				1CA84FF42BEFB4C50025DE0F /* FamilyMemberTableCell.xib */,
+			);
+			path = FamilyMemberTableCell;
+			sourceTree = "<group>";
+		};
 		1CB0488B2B9CB57A00DAB3FA /* NotificationsCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -509,7 +528,7 @@
 				1CCED9852BDDA7F000DAD2F1 /* MeetingsModel.swift */,
 				1CCED9882BDDA84E00DAD2F1 /* MeetingsViewModel.swift */,
 				1C38E5B82B854C28009614C0 /* MeetingsVC.swift */,
-				1CCED9872BDDA83300DAD2F1 /* MeetingDetailsVC */,
+				1C55D24E2B98BF420027E0AA /* MeetingDetailsVC.swift */,
 				1C55D2492B98BA920027E0AA /* MeetingsTableCell */,
 				1C55D2442B9880ED0027E0AA /* CalendarCollectionCell */,
 				1C55D2502B98C8980027E0AA /* MembersCollectionCell */,
@@ -524,6 +543,7 @@
 				1C38E5BA2B854C35009614C0 /* FamilyTreeVC.swift */,
 				1C672C0C2B938AF800D6DA09 /* FamilyMemberDetailsVC.swift */,
 				1C2658172B97CFC20021594F /* FamilyTreeFilterVC.swift */,
+				1CA84FF22BEFB4A40025DE0F /* FamilyMemberTableCell */,
 				1C672C072B934C7A00D6DA09 /* FamilyTreeTableCell */,
 			);
 			path = FamilyTreeTab;
@@ -554,14 +574,6 @@
 				1C672C032B91E4C600D6DA09 /* NewsDetailsVC.swift */,
 			);
 			path = NewsDetailsVC;
-			sourceTree = "<group>";
-		};
-		1CCED9872BDDA83300DAD2F1 /* MeetingDetailsVC */ = {
-			isa = PBXGroup;
-			children = (
-				1C55D24E2B98BF420027E0AA /* MeetingDetailsVC.swift */,
-			);
-			path = MeetingDetailsVC;
 			sourceTree = "<group>";
 		};
 		1CCED98A2BE2A59200DAD2F1 /* ProfileVC */ = {
@@ -654,6 +666,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C66F7DC2BE55F97008CCFA9 /* NewsMainTableCell.xib in Resources */,
+				1C2DFD9B2BF15A8F005C10A0 /* MainMeetingsTableCell.xib in Resources */,
+				1CA84FF62BEFB4C50025DE0F /* FamilyMemberTableCell.xib in Resources */,
 				1C92AFDF2B99F641001E3D3D /* SideMenu.storyboard in Resources */,
 				1C14F3CF2B7E571C0095EB4D /* LaunchScreen.storyboard in Resources */,
 				1C55D2482B9881060027E0AA /* CalendarCollectionCell.xib in Resources */,
@@ -753,6 +767,7 @@
 				1CC1BF8A2BE3B1BC004B4C25 /* BanksViewModel.swift in Sources */,
 				1C4664A12B8A161E00A802A1 /* UITextField+Extension.swift in Sources */,
 				1C38E5B92B854C28009614C0 /* MeetingsVC.swift in Sources */,
+				1C2DFD9A2BF15A8F005C10A0 /* MainMeetingsTableCell.swift in Sources */,
 				1CB0488E2B9CB5B200DAB3FA /* NotificationsCell.swift in Sources */,
 				1CB0488A2B9CB3DC00DAB3FA /* NotificationsVC.swift in Sources */,
 				1C38E5BB2B854C35009614C0 /* FamilyTreeVC.swift in Sources */,
@@ -785,6 +800,7 @@
 				1C9B546C2B815DB700FDF9CF /* OnboardingVC1.swift in Sources */,
 				1CCED9772BDA8B8B00DAD2F1 /* UIView+Extension.swift in Sources */,
 				1C9B54722B81612D00FDF9CF /* OnboardingVC.swift in Sources */,
+				1CA84FF52BEFB4C50025DE0F /* FamilyMemberTableCell.swift in Sources */,
 				1C47F1172BEEFAF1004715AA /* CustomTextField.swift in Sources */,
 				1C55D24C2B98BAAB0027E0AA /* MeetingsTableCell.swift in Sources */,
 				1C55D2472B9881060027E0AA /* CalendarCollectionCell.swift in Sources */,

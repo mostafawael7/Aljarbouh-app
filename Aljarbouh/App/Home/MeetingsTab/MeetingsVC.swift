@@ -11,6 +11,7 @@ import HorizontalCalendar
 class MeetingsVC: UIViewController {
     private let viewModel = MeetingsViewModel()
     
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dateLbl: UILabel!
     @IBOutlet weak var calendarView: UIView!
     @IBOutlet weak var calendarViewLbl: UILabel!
@@ -27,14 +28,13 @@ class MeetingsVC: UIViewController {
     @IBOutlet weak var eventAddressLbl: UILabel!
     @IBOutlet weak var eventView: UIView!
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var dateView: UIView!
-    @IBOutlet weak var addressView: UIView!
-    
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var mainViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     
     let collectionCellID = "CalendarCollectionCell"
     let tableCellID = "MeetingsTableCell"
+    let tableMainCellID = "MainMeetingsTableCell"
     var daysOfWeek = [
         "الجمعة",
         "السبت",
@@ -118,16 +118,7 @@ class MeetingsVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: tableCellID, bundle: nil), forCellReuseIdentifier: tableCellID)
-        
-        imageView.addGradientOverlay()
-        
-        imageView.layer.cornerRadius = 20
-        dateView.layer.cornerRadius = 25
-        dateView.layer.borderWidth = 1
-        dateView.layer.borderColor = UIColor.white.cgColor
-        addressView.layer.cornerRadius = 15
-        addressView.layer.borderWidth = 1
-        addressView.layer.borderColor = UIColor.white.cgColor
+        tableView.register(UINib(nibName: tableMainCellID, bundle: nil), forCellReuseIdentifier: tableMainCellID)
         
     }
     
@@ -211,6 +202,7 @@ class MeetingsVC: UIViewController {
             switch result {
             case .success:
                 self.meetings = viewModel.meetings
+                self.adjustLayout(count: self.meetings.count)
                 self.tableView.reloadData()
                 self.hideAnimatedActivityIndicatorView()
             case .failure(let error as NSError):
@@ -228,12 +220,34 @@ class MeetingsVC: UIViewController {
             switch result {
             case .success:
                 self.meeting = viewModel.meeting
-                print(self.meeting)
+                self.adjustLayout(count: self.meetings.count)
+                self.tableView.reloadData()
                 self.hideAnimatedActivityIndicatorView()
             case .failure(let error as NSError):
                 self.hideAnimatedActivityIndicatorView()
                 self.handleInternetError(error: error)
             }
+        }
+    }
+    
+    private func adjustLayout(count: Int){
+        if count == 0 {
+            print("0")
+            scrollView.isScrollEnabled = false
+            tableView.isHidden = true
+            mainViewHeight.constant += 1000
+        }else if count == 1 {
+            print("1")
+            scrollView.isScrollEnabled = true
+            tableView.isHidden = false
+            tableViewHeight.constant = 250
+            mainViewHeight.constant = 500 + 250
+        }else if count > 1 {
+            print(">1")
+            scrollView.isScrollEnabled = true
+            tableView.isHidden = false
+            tableViewHeight.constant = CGFloat(250 + (meetings.count - 1) * 150)
+            mainViewHeight.constant = CGFloat(400 + 250 + (meetings.count - 1) * 150)
         }
     }
     
@@ -324,12 +338,31 @@ extension MeetingsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: tableCellID, for: indexPath) as! MeetingsTableCell
-        cell.configureCell(meeting: meetings[indexPath.row])
-        return cell
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: tableMainCellID, for: indexPath) as! MainMeetingsTableCell
+            cell.configureCell(object: meetings[indexPath.row])
+            return cell
+        default:
+            let cell = tableView.dequeueReusableCell(withIdentifier: tableCellID, for: indexPath) as! MeetingsTableCell
+            cell.configureCell(object: meetings[indexPath.row])
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigateToVC(vc: "MeetingDetailsVC", inStoryboard: "Home")
+        let dest = self.storyboard?.instantiateViewController(withIdentifier: "MeetingDetailsVC") as! MeetingDetailsVC
+        dest.meeting = meetings[indexPath.row]
+        dest.modalPresentationStyle = .fullScreen
+        present(dest, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        switch indexPath.row {
+        case 0:
+            return 250
+        default:
+            return 150
+        }
     }
 }

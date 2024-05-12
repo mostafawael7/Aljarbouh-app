@@ -52,3 +52,9 @@ struct Media: Codable {
         case previewURL = "preview_url"
     }
 }
+
+
+struct MediaShort: Codable{
+    let url: String?
+    let name: String?
+}

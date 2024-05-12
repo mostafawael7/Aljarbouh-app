@@ -50,9 +50,21 @@ struct Profile: Codable {
     let userID: Int?
     let status: String?
     let live: Int?
-    let profession: String?
+    let profission: String?
     let createdAt: String?
     let updatedAt: String?
+    let residenceCountry: String?
+    let bornCountry: String?
+    let fatherFullName: String?
+    let motherName: String?
+    let email: String?
+    let phone: String?
+    let addressDetails: String?
+    let socialStatus: String?
+    let gender: String?
+    let generation: String?
+    let age: Int?
+    let family: [Family]?
     let media: [Media]?
 
     enum CodingKeys: String, CodingKey {
@@ -68,9 +80,21 @@ struct Profile: Codable {
         case userID = "user_id"
         case status = "status"
         case live = "live"
-        case profession = "profession"
+        case profission = "profission"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
+        case residenceCountry = "residence_country"
+        case bornCountry = "born_country"
+        case fatherFullName = "father_full_name"
+        case motherName = "mother_name"
+        case email = "email"
+        case phone = "phone"
+        case addressDetails = "address_details"
+        case socialStatus = "social_status"
+        case gender = "gender"
+        case generation = "generation"
+        case age = "age"
+        case family = "family"
         case media = "media"
     }
     
@@ -87,9 +111,21 @@ struct Profile: Codable {
         self.userID = nil
         self.status = nil
         self.live = nil
-        self.profession = nil
+        self.profission = nil
         self.createdAt = nil
         self.updatedAt = nil
+        self.residenceCountry = nil
+        self.bornCountry = nil
+        self.fatherFullName = nil
+        self.motherName = nil
+        self.email = nil
+        self.phone = nil
+        self.addressDetails = nil
+        self.socialStatus = nil
+        self.gender = nil
+        self.generation = nil
+        self.age = nil
+        self.family = nil
         self.media = nil
     }
     
@@ -111,6 +147,21 @@ struct Profile: Codable {
         }
         
         return fullName
+    }
+}
+
+// MARK: - Family
+struct Family: Codable {
+    let relatedProfileID: Int?
+    let relationType: String?
+    let firstName: String?
+    let imageURL: String?
+
+    enum CodingKeys: String, CodingKey {
+        case relatedProfileID = "related_profile_id"
+        case relationType = "relation_type"
+        case firstName = "first_name"
+        case imageURL = "image_url"
     }
 }
 

@@ -50,18 +50,18 @@ class NewsDetailsVC: UIViewController {
     }
     
     func adjustLayout() {
-            // Calculate the required height for the label
-            let labelSize = descriptionLbl.sizeThatFits(CGSize(width: descriptionLbl.frame.width, height: CGFloat.greatestFiniteMagnitude))
-            
-            // Update the label height constraint (assuming you are using Auto Layout)
+        // Calculate the required height for the label
+        let labelSize = descriptionLbl.sizeThatFits(CGSize(width: descriptionLbl.frame.width, height: CGFloat.greatestFiniteMagnitude))
+        
+        // Update the label height constraint (assuming you are using Auto Layout)
         descriptionLbl.heightAnchor.constraint(equalToConstant: labelSize.height).isActive = true
         
         print(labelSize)
-            
-            // Update the content size of the scroll view
-//            scrollView.contentSize = CGSize(width: scrollView.frame.width, height: labelSize.height + /* add height for image view, table view, and spacing */)
+        
+        // Update the content size of the scroll view
+        //            scrollView.contentSize = CGSize(width: scrollView.frame.width, height: labelSize.height + /* add height for image view, table view, and spacing */)
         viewHeight.constant += labelSize.height
-        }
+    }
 }
 
 //extension NewsDetailsVC: UITableViewDelegate, UITableViewDataSource {

@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="member" translatesAutoresizingMaskIntoConstraints="NO" id="omh-dV-mMa">
-                        <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                        <rect key="frame" x="0.0" y="0.99999999999999822" width="120" height="138.66666666666669"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Uyx-Hf-Lip">
                         <rect key="frame" x="4" y="95.666666666666671" width="112" height="36.333333333333329"/>
@@ -53,7 +53,9 @@
             </constraints>
             <size key="customSize" width="154" height="186"/>
             <connections>
+                <outlet property="jobLbl" destination="CAp-Ut-cao" id="ZNB-Gw-iOj"/>
                 <outlet property="memberImage" destination="omh-dV-mMa" id="L1R-1P-FPF"/>
+                <outlet property="nameLbl" destination="apH-QL-7Fl" id="DhV-hd-ul1"/>
             </connections>
             <point key="canvasLocation" x="32.061068702290072" y="36.619718309859159"/>
         </collectionViewCell>

@@ -107,6 +107,14 @@ class HomeVC: UIViewController {
         dest.modalPresentationStyle = .fullScreen
         self.present(dest, animated: true)
     }
+    @IBAction func moreMeetingsBtnClicked(_ sender: UIButton) {
+        //I want to go to tab number 1 when I click on this button
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+               let tabBarController = windowScene.windows.first?.rootViewController as? HomeTabBar {
+                // Set the index of the tab you want to navigate to
+                tabBarController.selectedIndex = 1 // Assuming the index of the meetings tab is 1
+            }
+    }
 }
 
 extension HomeVC:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
