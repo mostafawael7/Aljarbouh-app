@@ -98,6 +98,8 @@
 		1CCED9892BDDA84E00DAD2F1 /* MeetingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCED9882BDDA84E00DAD2F1 /* MeetingsViewModel.swift */; };
 		1CCED98C2BE2A5A600DAD2F1 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CCED98B2BE2A5A600DAD2F1 /* ProfileViewModel.swift */; };
 		1CD5769F2B8BBE9A00432090 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD5769E2B8BBE9A00432090 /* NewsVC.swift */; };
+		1CEF52D12BF91630008996B9 /* MeetingsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEF52CF2BF91630008996B9 /* MeetingsCollectionCell.swift */; };
+		1CEF52D22BF91630008996B9 /* MeetingsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1CEF52D02BF91630008996B9 /* MeetingsCollectionCell.xib */; };
 		EAD5B5B76B8970F2BBB4912B /* Pods_Aljarbouh.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E64C2E1DAB8FD96C98970AE /* Pods_Aljarbouh.framework */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +197,8 @@
 		1CCED9882BDDA84E00DAD2F1 /* MeetingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsViewModel.swift; sourceTree = "<group>"; };
 		1CCED98B2BE2A5A600DAD2F1 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		1CD5769E2B8BBE9A00432090 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		1CEF52CF2BF91630008996B9 /* MeetingsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingsCollectionCell.swift; sourceTree = "<group>"; };
+		1CEF52D02BF91630008996B9 /* MeetingsCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeetingsCollectionCell.xib; sourceTree = "<group>"; };
 		1DE012825F1E8BED96B94E43 /* Pods-Aljarbouh.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aljarbouh.release.xcconfig"; path = "Target Support Files/Pods-Aljarbouh/Pods-Aljarbouh.release.xcconfig"; sourceTree = "<group>"; };
 		1E64C2E1DAB8FD96C98970AE /* Pods_Aljarbouh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Aljarbouh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		807DCCB43EF8D4B2AE5DAE4D /* Pods-Aljarbouh.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aljarbouh.debug.xcconfig"; path = "Target Support Files/Pods-Aljarbouh/Pods-Aljarbouh.debug.xcconfig"; sourceTree = "<group>"; };
@@ -530,6 +534,7 @@
 				1C38E5B82B854C28009614C0 /* MeetingsVC.swift */,
 				1C55D24E2B98BF420027E0AA /* MeetingDetailsVC.swift */,
 				1C55D2492B98BA920027E0AA /* MeetingsTableCell */,
+				1CEF52CE2BF91612008996B9 /* MeetingsCollectionCell */,
 				1C55D2442B9880ED0027E0AA /* CalendarCollectionCell */,
 				1C55D2502B98C8980027E0AA /* MembersCollectionCell */,
 			);
@@ -583,6 +588,15 @@
 				1C92AFF02B9C7264001E3D3D /* ProfileVC.swift */,
 			);
 			path = ProfileVC;
+			sourceTree = "<group>";
+		};
+		1CEF52CE2BF91612008996B9 /* MeetingsCollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				1CEF52CF2BF91630008996B9 /* MeetingsCollectionCell.swift */,
+				1CEF52D02BF91630008996B9 /* MeetingsCollectionCell.xib */,
+			);
+			path = MeetingsCollectionCell;
 			sourceTree = "<group>";
 		};
 		5A4D9FA66DA5855074E22667 /* Pods */ = {
@@ -674,6 +688,7 @@
 				1C462B362B8BC8D200D51DCB /* NewsTableCell.xib in Resources */,
 				1C672C0B2B934C9A00D6DA09 /* FamilyTreeTableCell.xib in Resources */,
 				1C4664A82B8A1CE000A802A1 /* NewsCollectionCell.xib in Resources */,
+				1CEF52D22BF91630008996B9 /* MeetingsCollectionCell.xib in Resources */,
 				1C3A9D142B8A501200F69C3A /* BusinessSectorCollectionCell.xib in Resources */,
 				1C55D24D2B98BAAB0027E0AA /* MeetingsTableCell.xib in Resources */,
 				1C14F3CC2B7E571C0095EB4D /* Assets.xcassets in Resources */,
@@ -798,6 +813,7 @@
 				1C924E7A2B7FFF58005C7B5A /* WelcomeVC.swift in Sources */,
 				1C92AFEE2B9BB1BE001E3D3D /* BankCell.swift in Sources */,
 				1C9B546C2B815DB700FDF9CF /* OnboardingVC1.swift in Sources */,
+				1CEF52D12BF91630008996B9 /* MeetingsCollectionCell.swift in Sources */,
 				1CCED9772BDA8B8B00DAD2F1 /* UIView+Extension.swift in Sources */,
 				1C9B54722B81612D00FDF9CF /* OnboardingVC.swift in Sources */,
 				1CA84FF52BEFB4C50025DE0F /* FamilyMemberTableCell.swift in Sources */,

@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if loggedIn {
             let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
             let homeTabBarVC = homeStoryboard.instantiateViewController(identifier: "HomeTabBar") as? HomeTabBar
-            homeTabBarVC?.selectedIndex = 3
+            homeTabBarVC?.selectedIndex = 2
             window.rootViewController = homeTabBarVC
         } else {
             let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)

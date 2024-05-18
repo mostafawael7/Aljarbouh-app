@@ -34,7 +34,11 @@ class WelcomeVC: UIViewController {
         }
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-            self.navigateToVC(vc: "HomeTabBar", inStoryboard: "Home")
+            let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+            let dest = storyBoard.instantiateViewController(identifier: "HomeTabBar") as! HomeTabBar
+            dest.modalPresentationStyle = .fullScreen
+            dest.selectedIndex = 2
+            self.present(dest, animated: true)
         }
     }
 }

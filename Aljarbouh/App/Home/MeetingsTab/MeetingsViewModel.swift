@@ -25,7 +25,7 @@ class MeetingsViewModel {
         ApiServices.shared.genericGetRequest(url: url) { [weak self] (response: Result<GetMeetings, Error>) in
             guard let self = self else { return }
             
-            print(response)
+//            print(response)
             
             switch response{
             case .success(let data):
@@ -44,7 +44,7 @@ class MeetingsViewModel {
         ApiServices.shared.genericGetRequest(url: url) { [weak self] (response: Result<GetMeetings, Error>) in
             guard let self = self else { return }
             
-            print(response)
+//            print(response)
             
             switch response{
             case .success(let data):

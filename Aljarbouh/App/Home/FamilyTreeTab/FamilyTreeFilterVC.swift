@@ -102,12 +102,12 @@ class FamilyTreeFilterVC: UIViewController {
         let selectedDate = datePicker.date
         date = dateFormatter.string(from: selectedDate)
         birthdayYearTF.text = date
-        birthdayYearTF.resignFirstResponder()
+//        birthdayYearTF.resignFirstResponder()
     }
     
     @objc private func openDropDown() {
         socialStatusDropdown.show()
-        socialStatusTF.resignFirstResponder()
+//        socialStatusTF.resignFirstResponder()
     }
     
     private func toggleTextFields(value: Bool){
@@ -161,7 +161,7 @@ extension FamilyTreeFilterVC: UITextFieldDelegate {
         switch textField {
         case socialStatusTF:
             socialStatusDropdown.show()
-            socialStatusTF.resignFirstResponder()
+//            socialStatusTF.resignFirstResponder()
         default:
             break
         }

@@ -24,7 +24,9 @@ class LoginViewModel {
                 }
                 UserDefaultsManager.shared.store(true, forKey: UserDefaultKeys.LoggedIn)
                 UserDefaultsManager.shared.store(false, forKey: UserDefaultKeys.ShowOnboarding)
-                UserDefaultsManager.shared.store(response.data?.profile?.id, forKey: UserDefaultKeys.ProfileID)
+                if let id = response.data?.profile?.id {
+                    UserDefaultsManager.shared.store(id, forKey: UserDefaultKeys.ProfileID)
+                }
                 
                 self.getLoginResponse = response
                 

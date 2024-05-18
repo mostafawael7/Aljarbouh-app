@@ -1,15 +1,15 @@
 //
-//  MainMeetingsTableCell.swift
+//  MeetingsCollectionCell.swift
 //  Aljarbouh
 //
-//  Created by Hendawi on 12/05/2024.
+//  Created by Hendawi on 18/05/2024.
 //
 
 import UIKit
 import Kingfisher
 
-class MainMeetingsTableCell: UITableViewCell {
-
+class MeetingsCollectionCell: UICollectionViewCell {
+    
     @IBOutlet weak var parentView: UIView!
     @IBOutlet weak var backgroundImg: UIImageView!
     @IBOutlet weak var dateView: UIView!
@@ -35,10 +35,6 @@ class MainMeetingsTableCell: UITableViewCell {
         addressView.layer.borderWidth = 1
         addressView.layer.borderColor = UIColor.white.cgColor
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-    }
     
     func configureCell(object: Meeting){
         if let media = object.media?.first,
@@ -52,7 +48,7 @@ class MainMeetingsTableCell: UITableViewCell {
         dayLbl.text = String(object.date?.extractDay() ?? 0)
         monthLbl.text = object.date?.extractMonth() ?? "-"
         dateLbl.text = object.hijriDate?.extractHijriDate() ?? "-"
-//        countdownLbl.text = "\(object.hijriDate?.daysUntilDate() ?? 0)الوقت المتبقي: "
+//        countdownLbl.text = "الوقت المتبقي: \(object.hijriDate?.daysUntilDate() ?? 0)"
         titleLbl.text = object.title
         if let address = object.address {
             addressView.isHidden = false
@@ -61,5 +57,5 @@ class MainMeetingsTableCell: UITableViewCell {
             addressView.isHidden = true
         }
     }
-    
+
 }

@@ -30,9 +30,11 @@ class MeetingDetailsVC: UIViewController {
     @IBOutlet weak var member4: UIImageView!
     @IBOutlet weak var member5: UIImageView!
     
+    @IBOutlet weak var attendeesLbl: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var mapView: UIImageView!
     @IBOutlet weak var directionsBtn: UIButton!
+    @IBOutlet weak var viewHeight: NSLayoutConstraint!
     
     let collectionCell = "MembersCollectionCell"
     
@@ -62,6 +64,10 @@ class MeetingDetailsVC: UIViewController {
         
         mapView.layer.cornerRadius = 20
         directionsBtn.layer.cornerRadius = 10
+        
+        attendeesLbl.isHidden = true
+        collectionView.isHidden = true
+        viewHeight.constant -= 200
     }
     
     private func initCollectionView(){
@@ -80,12 +86,28 @@ class MeetingDetailsVC: UIViewController {
             backgroundImg.image = UIImage(named: "image1")
         }
         
+//        if meeting.attendees?.count == 0 {
+//            attendeesLbl.isHidden = true
+//            collectionView.isHidden = true
+//            viewHeight.constant -= 200
+//        }else{
+//            attendeesLbl.isHidden = false
+//            collectionView.isHidden = false
+//        }
+        
         addressLbl.text = meeting.address ?? "-"
         timeLbl.text = "الساعة \(meeting.hours ?? "-")"
         dayLbl.text = String(meeting.date?.extractDay() ?? 0)
         monthLbl.text = meeting.date?.extractMonth() ?? "-"
         titleLbl.text = meeting.title ?? "-"
         descriptionLbl.text = meeting.description ?? "-"
+        adjustLayout()
+    }
+    
+    func adjustLayout() {
+        let labelSize = descriptionLbl.sizeThatFits(CGSize(width: descriptionLbl.frame.width, height: CGFloat.greatestFiniteMagnitude))
+        descriptionLbl.heightAnchor.constraint(equalToConstant: labelSize.height).isActive = true
+        viewHeight.constant += labelSize.height
     }
 }
 
@@ -95,29 +117,28 @@ extension MeetingDetailsVC: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      if let attendees = meeting.attendees {
-        return attendees.count
-      } else {
-        // Handle the case where attendees is nil
-        return 0 // Or some other default value
-      }
+        if let attendees = meeting.attendees {
+            return attendees.count
+        } else {
+            return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      guard let attendees = meeting.attendees else {
-        // Handle the case where attendees is nil
-        return UICollectionViewCell() // Or some placeholder cell
-      }
-
-      guard attendees.indices.contains(indexPath.item) else {
-        // Handle the case where indexPath is out of bounds
-        return UICollectionViewCell() // Or some placeholder cell
-      }
-
-      let attendee = attendees[indexPath.item]
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCell, for: indexPath) as! MembersCollectionCell
-      cell.configureCell(object: attendee)
-      return cell
+        guard let attendees = meeting.attendees else {
+            // Handle the case where attendees is nil
+            return UICollectionViewCell() // Or some placeholder cell
+        }
+        
+        guard attendees.indices.contains(indexPath.item) else {
+            // Handle the case where indexPath is out of bounds
+            return UICollectionViewCell() // Or some placeholder cell
+        }
+        
+        let attendee = attendees[indexPath.item]
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionCell, for: indexPath) as! MembersCollectionCell
+        cell.configureCell(object: attendee)
+        return cell
     }
 
     

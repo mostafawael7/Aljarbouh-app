@@ -99,9 +99,9 @@ class FamilyTreeVC: UIViewController {
             aliveFilterBtn.isSelected = false
             deadFilterBtn.isSelected = false
             if menFilterBtn.isSelected{
-                filter = "?gender=ذكر"
+                filter = "?gender=1"
             }else if womenFilterBtn.isSelected {
-                filter = "?gender=انثى"
+                filter = "?gender=0"
             }else{
                 filter = ""
             }
@@ -111,9 +111,9 @@ class FamilyTreeVC: UIViewController {
             aliveFilterBtn.isSelected = true
             deadFilterBtn.isSelected = false
             if menFilterBtn.isSelected{
-                filter = "?life=1&gender=ذكر"
+                filter = "?life=1&gender=1"
             }else if womenFilterBtn.isSelected {
-                filter = "?life=1&gender=انثى"
+                filter = "?life=1&gender=0"
             }else{
                 filter = "?life=1"
             }
@@ -123,11 +123,11 @@ class FamilyTreeVC: UIViewController {
             aliveFilterBtn.isSelected = false
             deadFilterBtn.isSelected = true
             if menFilterBtn.isSelected{
-                filter += "?life=0&gender=ذكر"
+                filter = "?life=0&gender=1"
             }else if womenFilterBtn.isSelected {
-                filter += "?life=0&gender=انثى"
+                filter = "?life=0&gender=0"
             }else{
-                filter += "?life=0"
+                filter = "?life=0"
             }
             getData()
         }
@@ -138,22 +138,22 @@ class FamilyTreeVC: UIViewController {
             menFilterBtn.isSelected = true
             womenFilterBtn.isSelected = false
             if allFilterBtn.isSelected {
-                filter = "?gender=ذكر"
+                filter = "?gender=1"
             }else if aliveFilterBtn.isSelected {
-                filter = "?life=1&gender=ذكر"
+                filter = "?life=1&gender=1"
             }else if deadFilterBtn.isSelected {
-                filter = "?life=0&gender=ذكر"
+                filter = "?life=0&gender=1"
             }
             getData()
         } else if sender == womenFilterBtn && !womenFilterBtn.isSelected {
             menFilterBtn.isSelected = false
             womenFilterBtn.isSelected = true
             if allFilterBtn.isSelected {
-                filter = "?gender=انثى"
+                filter = "?gender=0"
             }else if aliveFilterBtn.isSelected {
-                filter = "?life=1&gender=انثى"
+                filter = "?life=1&gender=0"
             }else if deadFilterBtn.isSelected {
-                filter = "?life=0&gender=انثى"
+                filter = "?life=0&gender=0"
             }
             getData()
         } else {

@@ -55,7 +55,7 @@ class SignupVC2: UIViewController {
         let selectedDate = datePicker.date
         date = dateFormatter.string(from: selectedDate)
         birthdateTF.text = date
-        birthdateTF.resignFirstResponder()
+//        birthdateTF.resignFirstResponder()
     }
     
     func isEmptyInput() -> Bool{

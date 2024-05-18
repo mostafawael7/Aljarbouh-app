@@ -21,6 +21,7 @@ class MembersCollectionCell: UICollectionViewCell {
     }
 
     func configureCell(object: Attendee){
+        print("object:\(object)")
         if let urlString = object.imageURL,
            let url = URL(string: urlString) {
             memberImage.kf.setImage(with: url, placeholder: UIImage(named: "member"), options: [.transition(ImageTransition.fade(0.2))])

@@ -60,21 +60,21 @@ class SideMenuVC: UIViewController {
         if let tappedView = gesture.view {
 //            print(tappedView.tag)
             let storyBoard = UIStoryboard(name: "Home", bundle: nil)
-            let dest = storyBoard.instantiateViewController(identifier: "HomeTabBar") as? HomeTabBar
-            dest?.modalPresentationStyle = .fullScreen
+            let dest = storyBoard.instantiateViewController(identifier: "HomeTabBar") as! HomeTabBar
+            dest.modalPresentationStyle = .fullScreen
             switch tappedView.tag{
             case 1: navigateToVC(vc: "ProfileVC", inStoryboard: "SideMenu")
             case 2: navigateToVC(vc: "FamilyHistoryVC", inStoryboard: "SideMenu")
             case 3: // شجرة العائلة
-                dest?.selectedIndex = 0
-                self.present(dest!, animated: true)
+                dest.selectedIndex = 0
+                self.present(dest, animated: true)
             case 4: navigateToVC(vc: "HistoricCharactersVC", inStoryboard: "SideMenu")
             case 5: // أخبار العائلة
-                dest?.selectedIndex = 3
-                self.present(dest!, animated: true)
+                dest.selectedIndex = 2
+                self.present(dest, animated: true)
             case 6: // الإجتماعات
-                dest?.selectedIndex = 1
-                self.present(dest!, animated: true)
+                dest.selectedIndex = 1
+                self.present(dest, animated: true)
             case 7: navigateToVC(vc: "NotificationsVC", inStoryboard: "SideMenu")
             case 8: navigateToVC(vc: "FamilyBoxVC", inStoryboard: "SideMenu")
 //            case 9: // الإعدادات

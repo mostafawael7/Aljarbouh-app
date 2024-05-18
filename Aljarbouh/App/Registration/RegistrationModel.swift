@@ -61,7 +61,7 @@ struct Profile: Codable {
     let phone: String?
     let addressDetails: String?
     let socialStatus: String?
-    let gender: String?
+    let gender: Int?
     let generation: String?
     let age: Int?
     let family: [Family]?

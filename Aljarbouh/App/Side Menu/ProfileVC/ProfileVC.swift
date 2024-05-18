@@ -76,7 +76,7 @@ class ProfileVC: UIViewController {
     
     func getData(){
         displayAnimatedActivityIndicatorView()
-        let id = UserDefaultsManager.shared.retrieve(forKey: UserDefaultKeys.ProfileID) as! Int
+        guard let id = UserDefaultsManager.shared.retrieve(forKey: UserDefaultKeys.ProfileID) as? Int else {return}
         viewModel.retrieve(id: id){ [weak self] result in
             guard let self = self else {return}
             

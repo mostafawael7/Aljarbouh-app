@@ -231,24 +231,27 @@ class MeetingsVC: UIViewController {
     }
     
     private func adjustLayout(count: Int){
-        if count == 0 {
-            print("0")
-            scrollView.isScrollEnabled = false
-            tableView.isHidden = true
-            mainViewHeight.constant += 1000
-        }else if count == 1 {
-            print("1")
-            scrollView.isScrollEnabled = true
-            tableView.isHidden = false
-            tableViewHeight.constant = 250
-            mainViewHeight.constant = 500 + 250
-        }else if count > 1 {
-            print(">1")
-            scrollView.isScrollEnabled = true
-            tableView.isHidden = false
-            tableViewHeight.constant = CGFloat(250 + (meetings.count - 1) * 150)
-            mainViewHeight.constant = CGFloat(400 + 250 + (meetings.count - 1) * 150)
-        }
+//        if count == 0 {
+//            print("0")
+//            scrollView.isScrollEnabled = false
+//            tableView.isHidden = true
+//            mainViewHeight.constant += 1000
+//        }else if count == 1 {
+//            print("1")
+//            scrollView.isScrollEnabled = true
+//            tableView.isHidden = false
+//            tableViewHeight.constant = 250
+//            mainViewHeight.constant = 500 + 250
+//        }else if count > 1 {
+//            print(">1")
+//            scrollView.isScrollEnabled = true
+//            tableView.isHidden = false
+//            tableViewHeight.constant = CGFloat(250 + (meetings.count - 1) * 150)
+//            mainViewHeight.constant = CGFloat(400 + 250 + (meetings.count - 1) * 150)
+//        }
+        tableViewHeight.constant = CGFloat(250 * count)
+        mainViewHeight.constant = CGFloat(250 * count)
+//        printHeights()
     }
     
     @IBAction func sidemenuBtnClicked(_ sender: UIButton) {
@@ -260,10 +263,19 @@ class MeetingsVC: UIViewController {
             calendarCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: false)
             calendarCollectionView.isHidden = false
             navBarHeight.constant = 270
+            tableViewHeight.constant += 120
+            mainViewHeight.constant += 120
         }else{
             calendarCollectionView.isHidden = true
             navBarHeight.constant = 150
+//            tableViewHeight.constant -= 120
+//            mainViewHeight.constant -= 120
         }
+    }
+    
+    func printHeights(){
+        print("tableViewHeight: \(tableViewHeight.constant)")
+        print("mainViewHeight: \(mainViewHeight.constant)")
     }
     
 }
@@ -312,6 +324,7 @@ extension MeetingsVC: UICollectionViewDelegate, UICollectionViewDataSource, UICo
             noEventsLbl.isHidden = true
             eventView.isHidden = false
         }
+        calendarBtnClicked(self.calendarBtn)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
